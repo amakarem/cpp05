@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 15:55:09 by aelaaser          #+#    #+#             */
-/*   Updated: 2025/07/11 17:08:35 by aelaaser         ###   ########.fr       */
+/*   Updated: 2025/07/11 17:09:23 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	std::cout << "\033[33mTest ex01\033[0m\n\n";
+	std::cout << "\033[33mTest ex00\033[0m\n\n";
 	std::cout << "\033[33mTesting invalid grade creations\033[0m\n";
 	try
 	{
