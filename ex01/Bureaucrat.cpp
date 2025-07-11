@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 15:34:55 by aelaaser          #+#    #+#             */
-/*   Updated: 2025/07/11 17:51:48 by aelaaser         ###   ########.fr       */
+/*   Updated: 2025/07/11 19:46:55 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,10 @@ void Bureaucrat::signForm(Form &form)
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << this->name << " couldn't sign " << form.getName() << " because his grade is " << this->grade << " and Form require minimum " << form.getSignGrade() << " - " << e.what() << std::endl;
+		std::cout << this->name << " couldn't sign " << form.getName() << " because ";
+		if (this->grade > form.getSignGrade()) 
+			std::cout << "his grade is " << this->grade << " and AForm require minimum " << form.getSignGrade() << " -";
+		std::cout << e.what() << std::endl;
 		return;
 	}
 	std::cout << this->name << " signed " << form.getName() << std::endl;
